@@ -3,19 +3,21 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
-import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
+import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 
 function App(props: any) {
     console.log("App rendering")
     return (
-        <div>
-            <OnOff />
-            <OnOff />
-            <OnOff />
+        <div className="appStyle">
             <OnOff />
 
             <UncontrolledAccordion titleValue={"Menu"} />
-            <UncontrolledAccordion titleValue={"Users"} />
+            <Accordion titleValue={"Menu"} collapsed={false}/>
+
+            <UncontrolledRating />
+            <Rating value={3}/>
+            {/*<UncontrolledAccordion titleValue={"Users"} />*/}
             {/*
             <Rating value={1}/>
             <Rating value={2}/>
