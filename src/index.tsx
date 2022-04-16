@@ -17,7 +17,7 @@ reportWebVitals();
 let a = {
     name: "Dima",
     age: 28,
-    adress: {
+    address: {
         city: "Saint-Petersburg",
         country: "Russia"
     }
@@ -27,7 +27,7 @@ let users = [
     {
         name: "Dima",
         age: 28,
-        adress: {
+        address: {
             city: "Saint-Petersburg",
             country: "Russia"
         }
@@ -35,11 +35,9 @@ let users = [
     {
         name: "Viktor",
         age: 30,
-        adress: {
+        address: {
             city: "Saint-Petersburg",
             country: "Russia"
         }
     }
 ]
-
-console.log(users[0].adress.country);
