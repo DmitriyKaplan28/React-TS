@@ -16,7 +16,7 @@ function App(props: any) {
 
     return (
         <div className="appStyle">
-            <UncontrolledOnOff />
+            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
             <OnOff on={on} setOn={setOn}/>
 
             <UncontrolledAccordion titleValue={"Menu"} />

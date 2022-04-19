@@ -7,7 +7,7 @@ type PropsType = {
 
 
 export const OnOff = (props: PropsType) => {
-    console.log("UncontrolledOnOff rendering")
+    console.log("OnOff rendering")
 
 
     const onStyle = {
