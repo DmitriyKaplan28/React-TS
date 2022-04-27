@@ -10,12 +10,6 @@ export default {
 
 const callBack = action('on or off clicked')
 
-export const OnMode = () => <UncontrolledOnOff onChange={callBack}/>;
-export const OffMode = () => <UncontrolledOnOff onChange={callBack}/>;
-
-
-export const ModeChange = () => {
-
-    const [value, setValue] = useState<boolean>(true)
-    return <UncontrolledOnOff onChange={setValue}/>
-}
+export const OnMode = () => <UncontrolledOnOff defaultOn={true} onChange={callBack}/>;
+export const OffMode = () => <UncontrolledOnOff defaultOn={false} onChange={callBack}/>;
+export const DefaultInputValue = () => <input value={'yo'} />;

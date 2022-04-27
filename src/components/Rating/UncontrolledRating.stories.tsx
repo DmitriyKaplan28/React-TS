@@ -8,7 +8,14 @@ export default {
     component: UncontrolledRating
 };
 
-export const SimpleRating = () => <UncontrolledRating/>;
+const callBack = action('smth')
+
+export const SimpleRating = () => <UncontrolledRating defaultValue={0} onChange={callBack}/>;
+export const SimpleRating1 = () => <UncontrolledRating defaultValue={1} onChange={callBack}/>;
+export const SimpleRating2 = () => <UncontrolledRating defaultValue={2} onChange={callBack}/>;
+export const SimpleRating3 = () => <UncontrolledRating defaultValue={3} onChange={callBack}/>;
+export const SimpleRating4 = () => <UncontrolledRating defaultValue={4} onChange={callBack}/>;
+export const SimpleRating5 = () => <UncontrolledRating defaultValue={5} onChange={callBack}/>;
 /*
 export const Rating1 = () => <Rating value={1} onClick={x=>x}/>;
 export const Rating2 = () => <Rating value={2} onClick={x=>x}/>;
