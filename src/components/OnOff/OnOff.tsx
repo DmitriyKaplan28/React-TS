@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 
-type PropsType = {
+export type OnOffPropsType = {
     on: boolean
     setOn:(on: boolean)=> void
 }
 
 
-export const OnOff = (props: PropsType) => {
+export const OnOff = (props: OnOffPropsType) => {
     console.log("OnOff rendering")
 
 
