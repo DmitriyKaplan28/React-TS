@@ -16,15 +16,11 @@ function App(props: any) {
 
     return (
         <div className="appStyle">
-            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
             <OnOff on={on} setOn={setOn}/>
 
-            <UncontrolledAccordion titleValue={"Menu"} />
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}} items={[{title:'1user', value: 1},{title:'2user', value: 2},{title:'3user', value: 3},{title:'4user', value: 4}]} onClick={()=>{}} />
 
-            {/*<UncontrolledRating />*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            {/*<UncontrolledAccordion titleValue={"Users"} />*/}
 
         </div>
     );
