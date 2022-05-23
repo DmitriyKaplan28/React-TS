@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from "react";
+import React, {useCallback, useMemo, useState} from "react";
 
 export default {
     title: 'useMemo',
@@ -71,3 +71,39 @@ export const HelpsForReactMemo = () => {
         <Users users={newArray}/>
     </>
 }
+
+export const LikeUseCallback = () => {
+    console.log('LUC')
+    const [counter, setCounter] = useState(0)
+    const [books, setBooks] = useState(['react', 'js', 'css', 'HTML'])
+
+
+    const memoizedAddBook = useMemo(() => {
+        return () => {
+            const newBooks = [...books, 'Angular' + new Date().getTime()]
+            setBooks(newBooks)
+        }
+    }, [books])
+
+    const memoizedAddBook2 = useCallback(() => {
+        const newBooks = [...books, 'Angular' + new Date().getTime()]
+        setBooks(newBooks)
+    }, [books])
+
+
+    return <>
+        <button onClick={() => setCounter(counter + 1)}>+</button>
+
+        {counter}
+        <Books addBook={memoizedAddBook}/>
+    </>
+}
+
+const BooksSecret = (props: {  addBook: ()=> void }) => {
+    console.log('books secret')
+    return <div>
+        <button onClick={props.addBook}>Add book</button>
+        </div>
+}
+
+const Books = React.memo(BooksSecret)
