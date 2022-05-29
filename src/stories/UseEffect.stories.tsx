@@ -48,11 +48,31 @@ export const SetTimeoutExample = () => {
         }, 1000)
     }, [])
 
-
-
     return <>
         Hello, counter: {counter} - fake: {fake}
         {/*<button onClick={() => setFake(fake + 1)}>+</button>
         <button onClick={() => setCounter(counter + 1)}>+</button>*/}
+    </>
+}
+
+export const TimeExample = () => {
+
+    const date = new Date()
+    const [hours, setHours] = useState(date.getHours)
+    const [minutes, setMinutes] = useState(date.getMinutes)
+    const [seconds, setSeconds] = useState(date.getSeconds)
+
+    useEffect(() => {
+
+        setInterval(() => {
+            console.log('tick-tack')
+            setHours(() => date.getHours())
+            setMinutes(() => date.getMinutes())
+            setSeconds(() => date.getSeconds())
+        }, 1000)
+    }, [])
+
+    return <>
+        {hours} : {minutes} : {seconds}
     </>
 }
