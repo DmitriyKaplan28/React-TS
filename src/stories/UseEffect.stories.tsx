@@ -33,3 +33,26 @@ export const SimpleExample = () => {
         <button onClick={() => setCounter(counter + 1)}>+</button>
     </>
 }
+
+export const SetTimeoutExample = () => {
+    const [fake, setFake] = useState(1)
+    const [counter, setCounter] = useState(1)
+
+    console.log('SetTimeoutExample')
+
+    useEffect(() => {
+        console.log('useEffect every render')
+        setInterval(() => {
+            console.log('interval' + counter)
+            setCounter((state) => state + 1)
+        }, 1000)
+    }, [])
+
+
+
+    return <>
+        Hello, counter: {counter} - fake: {fake}
+        {/*<button onClick={() => setFake(fake + 1)}>+</button>
+        <button onClick={() => setCounter(counter + 1)}>+</button>*/}
+    </>
+}
