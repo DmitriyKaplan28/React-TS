@@ -99,11 +99,11 @@ export const LikeUseCallback = () => {
     </>
 }
 
-const BooksSecret = (props: {  addBook: ()=> void }) => {
+const BooksSecret = (props: { addBook: () => void }) => {
     console.log('books secret')
     return <div>
         <button onClick={props.addBook}>Add book</button>
-        </div>
+    </div>
 }
 
 const Books = React.memo(BooksSecret)
