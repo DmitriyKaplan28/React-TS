@@ -106,7 +106,7 @@ export const KeysTrackerExample = () => {
 
     useEffect(() => {
 
-        const handler = (e:KeyboardEvent) => {
+        const handler = (e: KeyboardEvent) => {
             console.log(e.key);
             setText(text + e.key)
         }
