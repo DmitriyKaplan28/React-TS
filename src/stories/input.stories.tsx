@@ -9,7 +9,6 @@ export default {
     //component: input
 };
 
-
 export const UncontrolledInput = () => <input/>;
 
 export const TrackValueOfUncontrolledInput = () => {
