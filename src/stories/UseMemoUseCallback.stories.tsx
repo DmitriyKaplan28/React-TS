@@ -31,12 +31,10 @@ export const Example1 = () => {
     }
 
     return <>
-        {/*<input value={a} onChange={(e) => setA(Number(e.currentTarget.value))}/>*/}
+
         <input value={b} onChange={(e) => setB(+e.currentTarget.value)}/>
         <hr/>
-        {/*<div>
-            Result for a: {resultA}
-        </div>*/}
+
         <div>
             Result for b: {resultB}
         </div>
