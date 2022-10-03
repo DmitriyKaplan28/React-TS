@@ -27,7 +27,6 @@ export const Example1 = () => {
     </>
 }
 
-
 const UsersSecret = (props: { users: Array<string> }) => {
     console.log('users secret')
     return <div>{props.users.map((u, i) => <div key={i}>{u}</div>)}</div>
