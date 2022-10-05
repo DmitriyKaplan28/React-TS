@@ -60,7 +60,6 @@ export const LikeUseCallback = () => {
     const [counter, setCounter] = useState(0)
     const [books, setBooks] = useState(['react', 'js', 'css', 'HTML'])
 
-
     const memoizedAddBook = useMemo(() => {
         return () => {
             const newBooks = [...books, 'Angular' + new Date().getTime()]
