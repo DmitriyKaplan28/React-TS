@@ -72,7 +72,6 @@ export const LikeUseCallback = () => {
         setBooks(newBooks)
     }, [books])
 
-
     return <>
         <button onClick={() => setCounter(counter + 1)}>+</button>
 
