@@ -8,7 +8,6 @@ export const SimpleExample = () => {
     const [fake, setFake] = useState(1)
     const [counter, setCounter] = useState(1)
 
-
     useEffect(() => {
 
         document.title = counter.toString()
