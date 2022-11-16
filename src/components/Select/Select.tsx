@@ -33,9 +33,9 @@ export function Select(props: SelectPropsType) {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0; i < props.items.length; i++) {
                 if (props.items[i].value === hoveredElementValue) {
-                   const pretendentElement = e.key === "ArrowDown"
-                       ? props.items[i + 1]
-                       : props.items[i - 1]
+                    const pretendentElement = e.key === "ArrowDown"
+                        ? props.items[i + 1]
+                        : props.items[i - 1]
                     if (pretendentElement) {
                         props.onChange(pretendentElement.value);
                         return;
@@ -50,7 +50,7 @@ export function Select(props: SelectPropsType) {
         if (e.key === "Enter" || e.key === "Escape") {
             setActive(false);
         }
-            }
+    }
 
     return (
         <>
