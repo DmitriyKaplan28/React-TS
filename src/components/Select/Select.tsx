@@ -54,11 +54,6 @@ export function Select(props: SelectPropsType) {
 
     return (
         <>
-            {/*<select>
-                <option value="">SPb</option>
-                <option value="">MSc</option>
-                <option value="">City</option>
-            </select>*/}
             <div className={styles.select} onKeyUp={onKeyUp} tabIndex={0}>
                 <span className={styles.main}
                       onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
