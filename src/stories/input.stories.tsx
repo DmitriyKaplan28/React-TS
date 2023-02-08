@@ -1,8 +1,4 @@
-import React, {ChangeEvent, ChangeEventHandler, useRef, useState} from 'react';
-import {action} from '@storybook/addon-actions';
-//import {Simulate} from "react-dom/test-utils";
-//import input = Simulate.input;
-
+import React, {ChangeEvent, useRef, useState} from 'react';
 
 export default {
     title: 'input',
